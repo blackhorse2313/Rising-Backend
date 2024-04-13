@@ -1,0 +1,60 @@
+name: Pulumi 🏗️
+on: [push]
+jobs:
+  preview-dev:
+    name: Preview - Dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+      - name: Installing dependencies 📦️
+        run: pip install -r requirements.txt
+      - name: Preview 🔭
+        uses: pulumi/actions@v5
+        with:
+          command: preview
+          stack-name: dev
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+  preview-stage:
+    name: Preview - Stage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+      - name: Installing dependencies 📦️
+        run: pip install -r requirements.txt
+      - name: Preview 🔭
+        uses: pulumi/actions@v5
+        with:
+          command: preview
+          stack-name: stage
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+  preview-prod:
+    name: Preview - Prod
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+      - name: Installing dependencies 📦️
+        run: pip install -r requirements.txt
+      - name: Preview 🔭
+        uses: pulumi/actions@v5
+        with:
+          command: preview
+          stack-name: prod
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}

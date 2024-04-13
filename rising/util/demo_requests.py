@@ -1,0 +1,101 @@
+
+txt_2_img_1 = {
+    "prompt":"a beautiful empress portrait, with a brilliant, impossible striking big Cat headpiece, clothes made of cats, everything cats, symmetrical, dramatic studio lighting, rococo, baroque, greens, asian, hyperrealism, closeup, D&D, fantasy, intricate, elegant, highly detailed, digital painting, artstation, octane render, 8k, concept art, matte, sharp focus, illustration, art by Artgerm and Greg Rutkowski and Alphonse Mucha",
+    "seed":1096141474,
+    "batch_size":4,
+    "steps":20,
+    "cfg_scale":7,
+    "width":512,
+    "height":512,
+    "restore_faces":True,
+    "tiling":False,
+    "negative_prompt":""
+}
+txt_2_img_2 = {
+  "request_type": "txt2img",
+  "session_id": "653a8b6943ce4bc1f6985d5b",
+  "parameters": {
+    "alwayson_scripts": {},
+    "batch_size": 4,
+    "cfg_scale": 7,
+    "comments": None,
+    "denoising_strength": 0,
+    "disable_extra_networks": False,
+    "do_not_save_grid": False,
+    "do_not_save_samples": False,
+    "enable_hr": False,
+    "eta": None,
+    "firstphase_height": 0,
+    "firstphase_width": 0,
+    "height": 512,
+    "hr_checkpoint_name": None,
+    "hr_negative_prompt": "",
+    "hr_prompt": "",
+    "hr_resize_x": 0,
+    "hr_resize_y": 0,
+    "hr_sampler_name": None,
+    "hr_scale": 2,
+    "hr_second_pass_steps": 0,
+    "hr_upscaler": None,
+    "n_iter": 1,
+    "negative_prompt": "",
+    "override_settings": {
+      "sd_model_checkpoint": "dreamshaper_8.safetensors [879db523c3]"
+    },
+    "override_settings_restore_afterwards": True,
+    "prompt": "A Man",
+    "refiner_checkpoint": None,
+    "refiner_switch_at": None,
+    "restore_faces": True,
+    "s_churn": None,
+    "s_min_uncond": None,
+    "s_noise": None,
+    "s_tmax": None,
+    "s_tmin": None,
+    "sampler_index": "Euler",
+    "sampler_name": None,
+    "save_images": False,
+    "script_args": [],
+    "script_name": None,
+    "seed": 1096141474,
+    "seed_resize_from_h": -1,
+    "seed_resize_from_w": -1,
+    "send_images": True,
+    "steps": 25,
+    "styles": None,
+    "subseed": -1,
+    "subseed_strength": 0,
+    "tiling": False,
+    "width": 512
+  }
+}
+
+test_txt_2_img_1 ={
+        "prompt": "Fire",
+        "seed": 88,
+        "sampler_name": "Euler a",
+        "batch_size": 1,
+        "steps": 10,
+        "cfg_scale": 7,
+        "width": 64,
+        "height": 64,
+        "restore_faces": True,
+        "tiling": True,
+        "negative_prompt": "",
+    }
+
+
+payload_json_txt2img = {"parameters": {
+
+    "prompt": "Astronaut riding a horse in space",
+    # "seed": -1,
+    # "sampler_name": "Euler a",
+    # "batch_size": 1,
+    "steps": 10,
+    # "cfg_scale": 7,
+    # "width": 64,
+    # "height": 64,
+    # "restore_faces": False,
+    # "tiling": False,
+    # "negative_prompt": "",
+}}

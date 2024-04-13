@@ -1,0 +1,6 @@
+config:
+  aws:region: us-east-1
+  golab-infra:env: stage
+  golab-infra:r53_cname_root: false
+  golab-infra:r53_root_zone_name: golab.ai
+  golab-infra:r53_client_zone_name: ${golab-infra:env}.${golab-infra:r53_root_zone_name}

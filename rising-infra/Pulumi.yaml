@@ -1,0 +1,10 @@
+name: golab-infra
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Infrastructure support GoLab client and backend services
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: ""
